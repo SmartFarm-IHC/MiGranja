@@ -163,7 +163,13 @@ h1, h2, h3 { font-family: "Nunito", sans-serif; }
 .about-copy { position: relative; z-index: 1; max-width: 560px; padding: 55px 58px; color: white; }
 .section-kicker-light { color: var(--amber-300); }
 .about-copy h2 { margin: 6px 0 13px; color: white; font-size: clamp(34px, 4vw, 47px); line-height: 1.05; }
-.about-copy p { max-width: 455px; margin: 0; color: #f1e7dd; font-size: 14px; line-height: 1.8; }
+.about-copy p {
+  max-width: 480px;
+  margin: 0;
+  color: #f1e7dd;
+  font-size: 15px;
+  line-height: 1.85;
+}
 .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; margin-top: 23px; }
 .value-card { display: flex; align-items: flex-start; gap: 16px; min-height: 174px; padding: 23px 21px; border: 1px solid #eee6dc; border-radius: 16px; background: #fff; }
 .value-icon { display: grid; place-items: center; flex: 0 0 54px; width: 54px; height: 54px; border-radius: 15px; color: var(--green-700); background: #f7ead4; font-size: 22px; }
