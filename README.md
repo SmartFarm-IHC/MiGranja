@@ -1,11 +1,10 @@
 # MiGranja – Landing Page
 
-Landing page informativa de **MiGranja**, una solución digital propuesta por SmartFarm para centralizar y organizar la información de animales y lotes de una unidad ganadera.
+Landing page informativa de **Mi Granja**, una solución digital propuesta por SmartFarm para centralizar y organizar la información de animales y lotes de una unidad ganadera.
 
 ## Información del proyecto
 
-SmartFarm es una startup académica formada por estudiantes de Ingeniería de Software e Ingeniería de Sistemas de Información de la Universidad Peruana de Ciencias Aplicadas (UPC). Su propuesta, MiGranja, busca facilitar la gestión ganadera mediante una plataforma sencilla y accesible que permite registrar y consultar información del ganado.
-
+SmartFarm es una startup académica integrada por estudiantes de Ingeniería de Software e Ingeniería de Sistemas de Información de la Universidad Peruana de Ciencias Aplicadas (UPC). Su propuesta, MiGranja, busca facilitar la gestión ganadera mediante una plataforma sencilla y accesible que permite registrar y consultar información del ganado de manera eficiente.
 La landing page comunica la propuesta de valor, los servicios, los planes y la información institucional de SmartFarm.
 
 ## Autores
