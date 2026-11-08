@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MiGranja centraliza la información de tus animales y lotes para facilitar la gestión ganadera.">
+  <meta name="theme-color" content="#835a40">
+  <title>MiGranja | Tu granja, más inteligente</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="assets/scripts/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="MiGranja, ir al inicio">
+        <img src="assets/images/brand-symbol.svg" alt="" class="brand-mark">
+        <span class="brand-name"><span>Mi</span>Granja</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a class="nav-link active" href="#inicio">Inicio</a>
+        <a class="nav-link" href="#servicios">Servicios</a>
+        <a class="nav-link" href="#planes">Planes</a>
+        <a class="nav-link" href="#nosotros">Quiénes somos</a>
+        <a class="nav-contact" href="#contacto">Contáctanos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Gestión ganadera en un solo lugar</span>
+          <h1 id="hero-title">Tu granja,<br><span>más inteligente.</span></h1>
+          <p class="hero-description">Organiza y consulta la información de tus animales, lotes, alimentación, vacunación y movimientos desde una plataforma sencilla.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#planes">Conoce los planes <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="button button-text" href="#servicios">Explorar servicios <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
+          </div>
+          <div class="hero-note"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Sin sensores ni equipos adicionales</div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-1">
+          <img src="assets/images/hero-farm.jpg" alt="Productor ganadero consultando información en su celular junto a su ganado">
+          <div class="hero-float-card">
+            <span class="float-icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+            <span><strong>Todo más organizado</strong><small>Información de tu granja</small></span>
+            <i class="fa-solid fa-check float-check" aria-hidden="true"></i>
+          </div>
+          <div class="hero-stamp"><i class="fa-solid fa-seedling" aria-hidden="true"></i><span>Hecho para<br>el campo</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom-line" aria-hidden="true"></div>
+    </section>
+
+    <section class="trust-strip" aria-label="Principales beneficios">
+      <div class="container trust-items">
+        <div><i class="fa-solid fa-folder-open" aria-hidden="true"></i><span>Información centralizada</span></div>
+        <div><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>Búsqueda por código</span></div>
+        <div><i class="fa-solid fa-clock" aria-hidden="true"></i><span>Menos tiempo buscando</span></div>
+        <div><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>Mejores decisiones</span></div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">SERVICIOS</span>
+          <h2 id="services-title">Todo lo que necesitas para<br><span>gestionar mejor tu granja.</span></h2>
+          <p>Las tareas esenciales de tu operación ganadera, organizadas en una sola plataforma.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon icon-brown"><i class="fa-solid fa-cow" aria-hidden="true"></i></div>
+            <h3>Gestión de animales</h3>
+            <p>Registra y consulta cada animal mediante su código individual.</p>
+            <a href="#contacto" aria-label="Consultar sobre gestión de animales"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-icon icon-amber"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+            <h3>Gestión de lotes</h3>
+            <p>Agrupa animales y consulta la información correspondiente a cada lote.</p>
+            <a href="#contacto" aria-label="Consultar sobre gestión de lotes"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-icon icon-green"><i class="fa-solid fa-wheat-awn" aria-hidden="true"></i></div>
+            <h3>Alimentación</h3>
+            <p>Registra y programa la alimentación de animales y lotes.</p>
+            <a href="#contacto" aria-label="Consultar sobre alimentación"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-card reveal reveal-delay-3">
+            <div class="service-icon icon-rose"><i class="fa-solid fa-syringe" aria-hidden="true"></i></div>
+            <h3>Vacunación</h3>
+            <p>Registra vacunas y tratamientos, y consulta las actividades pendientes.</p>
+            <a href="#contacto" aria-label="Consultar sobre vacunación"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </article>
+        </div>
+
+        <div class="service-extra reveal">
+          <div class="service-extra-copy">
+            <span class="section-kicker">MÁS CONTROL, MENOS COMPLICACIONES</span>
+            <h3>Conoce el recorrido de cada animal.</h3>
+            <p>Consulta historiales, registra ubicaciones y mantén un seguimiento de los movimientos del ganado entre corrales y potreros.</p>
+            <div class="feature-pills">
+              <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Ubicación</span>
+              <span><i class="fa-solid fa-route" aria-hidden="true"></i> Movimientos</span>
+              <span><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> Historial</span>
+            </div>
+          </div>
+          <div class="service-extra-image">
+            <img src="assets/images/feeding-cattle.jpg" alt="Encargado alimentando ganado en una granja">
+            <div class="image-caption"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Registros claros para cada actividad</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience-section section" aria-labelledby="audience-title">
+      <div class="container audience-layout">
+        <div class="audience-intro reveal">
+          <span class="section-kicker">PENSADA PARA TU TRABAJO</span>
+          <h2 id="audience-title">Una solución para quienes hacen crecer la granja.</h2>
+          <p>MiGranja reúne las necesidades de consulta y supervisión con las tareas de registro del día a día.</p>
+          <a class="button button-outline" href="#nosotros">Conoce SmartFarm <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="audience-cards">
+          <article class="audience-card reveal reveal-delay-1">
+            <div class="audience-number">01</div>
+            <div class="audience-icon"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
+            <h3>Productores y propietarios ganaderos</h3>
+            <p>Supervisa animales y lotes, consulta historiales y utiliza información organizada para tomar decisiones.</p>
+            <span class="audience-tag">Consulta y supervisión</span>
+          </article>
+          <article class="audience-card audience-card-dark reveal reveal-delay-2">
+            <div class="audience-number">02</div>
+            <div class="audience-icon"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i></div>
+            <h3>Administradores y encargados de granjas</h3>
+            <p>Registra alimentación, vacunación, ubicaciones y movimientos de manera práctica y ordenada.</p>
+            <span class="audience-tag">Registro y operación</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans-section section" id="planes" aria-labelledby="plans-title">
+      <div class="container">
+        <div class="section-heading section-heading-center reveal">
+          <span class="section-kicker">PLANES</span>
+          <h2 id="plans-title">Elige el plan que se adapta <span>a ti.</span></h2>
+          <p>Empieza con lo esencial y encuentra la alternativa adecuada para tu operación.</p>
+        </div>
+        <div class="plans-grid">
+          <article class="plan-card reveal">
+            <div class="plan-topline">Para comenzar</div>
+            <h3>Básico</h3>
+            <p class="plan-description">Ideal para pequeños productores y granjas.</p>
+            <div class="plan-price">Gratis</div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Gestión de animales</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Gestión de lotes</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Registro de alimentación</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Registro de vacunación</li>
+            </ul>
+            <a class="button button-plan button-plan-light plan-button" href="#contacto" data-plan="Básico">Comenzar</a>
+          </article>
+
+          <article class="plan-card plan-card-featured reveal reveal-delay-1">
+            <div class="plan-badge">Más elegido</div>
+            <div class="plan-topline">Para crecer</div>
+            <h3>Pro</h3>
+            <p class="plan-description">Para una gestión más completa.</p>
+            <div class="plan-price"><span>S/</span> 29.90</div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Todo el plan Básico</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Gestión de ubicaciones</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Registro de movimientos</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Historial ampliado</li>
+            </ul>
+            <a class="button button-plan button-plan-dark plan-button" href="#contacto" data-plan="Pro">Comenzar</a>
+          </article>
+
+          <article class="plan-card reveal reveal-delay-2">
+            <div class="plan-topline">Para operaciones grandes</div>
+            <h3>Premium</h3>
+            <p class="plan-description">Para operaciones ganaderas más grandes.</p>
+            <div class="plan-price"><span>S/</span> 59.90</div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Todo el plan Profesional</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Mayor capacidad de animales y lotes</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Gestión avanzada de registros</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Soporte especializado</li>
+            </ul>
+            <a class="button button-plan button-plan-light plan-button" href="#contacto" data-plan="Premium">Comenzar</a>
+          </article>
+        </div>
+        <p class="plans-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Los precios y características se presentan de acuerdo con el mock-up del proyecto.</p>
+      </div>
+    </section>
+
+    <section class="about-section section" id="nosotros" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-hero reveal">
+          <img src="assets/images/about-cattle.jpg" alt="Ganado pastando en un entorno rural">
+          <div class="about-overlay"></div>
+          <div class="about-copy">
+            <span class="section-kicker section-kicker-light">SMARTFARM</span>
+            <h2 id="about-title">Tecnología cercana al campo.</h2>
+            <p>Desarrollamos MiGranja para facilitar la gestión ganadera y centralizar la información de animales y lotes en una plataforma sencilla y accesible.</p>
+          </div>
+        </div>
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></div>
+            <div><h3>Misión</h3><p>Desarrollar soluciones digitales accesibles para gestionar de manera organizada la información del ganado y mejorar la eficiencia de las operaciones ganaderas.</p></div>
+          </article>
+          <article class="value-card reveal reveal-delay-1">
+            <div class="value-icon"><i class="fa-solid fa-binoculars" aria-hidden="true"></i></div>
+            <div><h3>Visión</h3><p>Ser una startup referente en soluciones digitales para el sector ganadero peruano, facilitando una administración más organizada, eficiente y accesible.</p></div>
+          </article>
+          <article class="value-card reveal reveal-delay-2">
+            <div class="value-icon"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i></div>
+            <div><h3>Valores</h3><p>Innovación, accesibilidad, compromiso, confiabilidad y simplicidad orientan el desarrollo de MiGranja.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact-panel reveal">
+        <div class="contact-copy">
+          <span class="section-kicker section-kicker-light">CONTÁCTANOS</span>
+          <h2 id="contact-title">Tu granja merece una gestión más simple.</h2>
+          <p>Conoce cómo MiGranja puede ayudarte a organizar la información de tus animales y lotes.</p>
+          <div class="contact-details">
+            <a href="mailto:info@migranja.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i> info@migranja.com</a>
+            <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Lima, Perú</span>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <h3>Solicita información</h3>
+          <label for="contact-name">Nombre</label>
+          <input type="text" id="contact-name" name="name" placeholder="Tu nombre" autocomplete="name" required>
+          <label for="contact-email">Correo electrónico</label>
+          <input type="email" id="contact-email" name="email" placeholder="nombre@correo.com" autocomplete="email" required>
+          <label for="contact-message">¿Qué necesitas gestionar?</label>
+          <textarea id="contact-message" name="message" rows="3" placeholder="Cuéntanos brevemente sobre tu granja..."></textarea>
+          <button class="button button-submit" type="submit">Enviar consulta <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+          <p class="form-note">Se abrirá tu aplicación de correo para enviar el mensaje.</p>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand-block">
+        <a class="brand brand-footer" href="#inicio" aria-label="MiGranja, ir al inicio">
+          <img src="assets/images/brand-symbol.svg" alt="" class="brand-mark">
+          <span class="brand-name"><span>Mi</span>Granja</span>
+        </a>
+        <p>Tecnología y control al servicio de tu granja. Gestionando un futuro más inteligente.</p>
+        <div class="social-links" aria-label="Redes sociales">
+          <a href="#contacto" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#contacto" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#contacto" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Navegación</h3>
+        <a href="#servicios">Servicios</a>
+        <a href="#planes">Planes</a>
+        <a href="#nosotros">Quiénes somos</a>
+      </div>
+      <div class="footer-contact">
+        <h3>Contacto</h3>
+        <a href="mailto:info@migranja.com">info@migranja.com</a>
+        <span>Lima, Perú</span>
+        <a href="#contacto" class="footer-cta">Hablemos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="current-year">2026</span> MiGranja. Todos los derechos reservados.</span>
+      <a href="#inicio">Volver arriba <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
