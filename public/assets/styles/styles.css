@@ -30,6 +30,9 @@ button, input, textarea { font: inherit; }
 .container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
 .skip-link { position: absolute; left: 16px; top: -60px; z-index: 1000; padding: 10px 16px; background: white; border-radius: 8px; }
 .skip-link:focus { top: 12px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--amber-700); outline-offset: 3px; border-radius: 6px; }
+.button:focus-visible, .nav-contact:focus-visible { border-radius: 999px; }
+.site-footer a:focus-visible, .contact-panel a:focus-visible { outline-color: var(--amber-300); }
 
 .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255, 253, 249, 0.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(103, 72, 50, 0.08); transition: box-shadow .25s ease; }
 .site-header.is-scrolled { box-shadow: 0 8px 28px rgba(56, 39, 29, 0.08); }
