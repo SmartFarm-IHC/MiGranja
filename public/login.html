@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#835a40">
+    <title>Iniciar sesión | MiGranja</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="assets/scripts/storage.js" defer></script>
+    <script src="assets/scripts/auth.js" defer></script>
+</head>
+
+<body class="app-page auth-page">
+
+<main class="auth-layout">
+
+    <section class="auth-brand-panel">
+        <a class="brand" href="index.html">
+            <img src="assets/images/brand-symbol.svg" alt="" class="brand-mark">
+            <span class="brand-name"><span>Mi</span>Granja</span>
+        </a>
+
+        <div class="auth-brand-content">
+            <span class="section-kicker">GESTIÓN GANADERA INTELIGENTE</span>
+            <h1>Tu granja,<br>más organizada.</h1>
+            <p>Controla tus animales, lotes, alimentación y vacunaciones desde un solo lugar.</p>
+        </div>
+
+        <div class="auth-brand-footer">
+            <i class="fa-solid fa-leaf"></i>
+            Simplifica la gestión de tu granja.
+        </div>
+    </section>
+
+    <section class="auth-form-panel">
+
+        <a href="index.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver al inicio
+        </a>
+
+        <!-- INICIAR SESIÓN -->
+        <div class="auth-card" id="login-view">
+
+            <span class="section-kicker">BIENVENIDO A MIGRANJA</span>
+            <h2>Iniciar sesión</h2>
+            <p class="auth-description">
+                Ingresa tus credenciales para acceder a tu granja.
+            </p>
+
+            <div id="login-feedback" class="feedback" role="alert" aria-live="polite"></div>
+
+            <form id="login-form">
+
+                <label for="login-email">Correo electrónico</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input
+                            type="email"
+                            id="login-email"
+                            placeholder="nombre@correo.com"
+                            autocomplete="username"
+                            required>
+                </div>
+
+                <label for="login-password">Contraseña</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input
+                            type="password"
+                            id="login-password"
+                            placeholder="Ingresa tu contraseña"
+                            autocomplete="current-password"
+                            minlength="8"
+                            required>
+                    <button class="password-toggle" type="button" data-toggle="login-password" aria-label="Mostrar contraseña">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+
+                <div class="auth-options">
+                    <label class="remember-option">
+                        <input type="checkbox" id="remember-me">
+                        Recordarme
+                    </label>
+
+                    <button type="button" class="text-button" id="show-recovery">
+                        ¿Olvidaste tu contraseña?
+                    </button>
+                </div>
+
+                <button type="submit" class="app-button">
+                    Iniciar sesión
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+            <div class="demo-credentials">
+                <strong><i class="fa-solid fa-circle-info"></i> Acceso de demostración</strong>
+                <span>Correo: demo@migranja.com</span>
+                <span>Contraseña: MiGranja2026!</span>
+            </div>
+        </div>
+
+        <!-- RECUPERACIÓN -->
+        <div class="auth-card hidden" id="recovery-view">
+
+            <span class="section-kicker">RECUPERACIÓN DE CUENTA</span>
+            <h2>¿Olvidaste tu contraseña?</h2>
+            <p class="auth-description">
+                Ingresa tu correo para iniciar el proceso de recuperación.
+            </p>
+
+            <div id="recovery-feedback" class="feedback" role="alert" aria-live="polite"></div>
+
+            <form id="recovery-form">
+                <label for="recovery-email">Correo electrónico</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="recovery-email" required placeholder="nombre@correo.com">
+                </div>
+
+                <button type="submit" class="app-button">
+                    Solicitar recuperación
+                </button>
+            </form>
+
+            <button type="button" class="text-button back-login" data-back-login>
+                <i class="fa-solid fa-arrow-left"></i> Volver al inicio de sesión
+            </button>
+        </div>
+
+        <!-- CAMBIO DE CONTRASEÑA -->
+        <div class="auth-card hidden" id="reset-view">
+
+            <span class="section-kicker">NUEVA CONTRASEÑA</span>
+            <h2>Restablecer contraseña</h2>
+            <p class="auth-description">
+                Ingresa el código de demostración y registra una nueva contraseña.
+            </p>
+
+            <div id="reset-feedback" class="feedback" role="alert" aria-live="polite"></div>
+
+            <form id="reset-form">
+
+                <label for="reset-code">Código de verificación</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-key"></i>
+                    <input id="reset-code" type="text" inputmode="numeric" maxlength="6" required placeholder="Código de 6 dígitos">
+                </div>
+
+                <label for="new-password">Nueva contraseña</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input id="new-password" type="password" minlength="8" required placeholder="Mínimo 8 caracteres">
+                    <button class="password-toggle" type="button" data-toggle="new-password" aria-label="Mostrar contraseña">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+
+                <label for="confirm-password">Confirmar contraseña</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input id="confirm-password" type="password" minlength="8" required placeholder="Repite la contraseña">
+                </div>
+
+                <button type="submit" class="app-button">
+                    Guardar nueva contraseña
+                </button>
+
+            </form>
+
+            <button type="button" class="text-button back-login" data-back-login>
+                <i class="fa-solid fa-arrow-left"></i> Volver al inicio de sesión
+            </button>
+        </div>
+
+        <p class="auth-legal">
+            MiGranja · SmartFarm-IHC
+        </p>
+
+    </section>
+</main>
+
+</body>
+</html>
