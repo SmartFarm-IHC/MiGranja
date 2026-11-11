@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#835a40">
+
+    <title>Panel de gestión | MiGranja</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="assets/scripts/storage.js" defer></script>
+    <script src="assets/scripts/dashboard.js" defer></script>
+</head>
+
+<body class="app-page dashboard-page">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="dashboard-sidebar" id="dashboard-sidebar">
+
+        <a href="index.html" class="brand dashboard-brand">
+            <img src="assets/images/brand-symbol.svg" class="brand-mark" alt="">
+            <span class="brand-name"><span>Mi</span>Granja</span>
+        </a>
+
+        <div class="sidebar-label">MENÚ PRINCIPAL</div>
+
+        <nav class="dashboard-nav">
+
+            <button class="dashboard-nav-item active" data-section="overview">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Resumen</span>
+            </button>
+
+            <button class="dashboard-nav-item" data-section="animals">
+                <i class="fa-solid fa-cow"></i>
+                <span>Animales</span>
+            </button>
+
+            <button class="dashboard-nav-item" data-section="lots">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Lotes</span>
+            </button>
+
+            <button class="dashboard-nav-item" data-section="vaccinations">
+                <i class="fa-solid fa-syringe"></i>
+                <span>Vacunaciones</span>
+            </button>
+
+            <button class="dashboard-nav-item" data-section="feeding">
+                <i class="fa-solid fa-wheat-awn"></i>
+                <span>Alimentación</span>
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div>
+                    <strong id="sidebar-user-name">Usuario</strong>
+                    <small>Administrador</small>
+                </div>
+            </div>
+
+            <button class="logout-button" id="logout-button">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Cerrar sesión
+            </button>
+        </div>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="dashboard-main">
+
+        <header class="dashboard-topbar">
+
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div>
+                <span class="topbar-subtitle">GESTIÓN GANADERA</span>
+                <h1 id="dashboard-section-title">Resumen general</h1>
+            </div>
+
+            <div class="topbar-user">
+                <span id="current-date"></span>
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="dashboard-content">
+
+            <!-- RESUMEN -->
+            <section id="overview-view" class="dashboard-view">
+
+                <div class="welcome-panel">
+                    <div>
+                        <span>BIENVENIDO A MIGRANJA</span>
+                        <h2>Hola, <strong id="welcome-user">Administrador</strong> 👋</h2>
+                        <p>Este es el resumen de la actividad de tu granja.</p>
+                    </div>
+                    <i class="fa-solid fa-tractor welcome-icon"></i>
+                </div>
+
+                <div class="dashboard-stats">
+
+                    <article class="stat-card">
+                        <div class="stat-icon stat-brown">
+                            <i class="fa-solid fa-cow"></i>
+                        </div>
+                        <div>
+                            <span>Animales registrados</span>
+                            <strong id="stat-animals">0</strong>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon stat-green">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <span>Lotes registrados</span>
+                            <strong id="stat-lots">0</strong>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon stat-amber">
+                            <i class="fa-solid fa-syringe"></i>
+                        </div>
+                        <div>
+                            <span>Vacunaciones próximas</span>
+                            <strong id="stat-vaccinations">0</strong>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon stat-blue">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                        </div>
+                        <div>
+                            <span>Registros de alimentación</span>
+                            <strong id="stat-feedings">0</strong>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="dashboard-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Próximas vacunaciones</h3>
+                            <p>Controla las próximas fechas programadas.</p>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                            <tr>
+                                <th>Animal</th>
+                                <th>Vacuna</th>
+                                <th>Próxima fecha</th>
+                            </tr>
+                            </thead>
+                            <tbody id="upcoming-vaccinations"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="dashboard-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Últimos registros de alimentación</h3>
+                            <p>Actividad reciente de la granja.</p>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                            <tr>
+                                <th>Destino</th>
+                                <th>Alimento</th>
+                                <th>Cantidad</th>
+                                <th>Fecha</th>
+                            </tr>
+                            </thead>
+                            <tbody id="recent-feedings"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ANIMALES -->
+            <section id="animals-view" class="dashboard-view hidden">
+
+                <div class="view-heading">
+                    <div>
+                        <h2>Gestión de animales</h2>
+                        <p>Registra y administra los animales de tu granja.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-panel">
+
+                    <h3 id="animal-form-title">Registrar nuevo animal</h3>
+
+                    <form id="animal-form" class="dashboard-form">
+
+                        <input type="hidden" id="animal-id">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="animal-code">Código de identificación *</label>
+                                <input id="animal-code" type="text" required placeholder="Ej. VAC-001">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="animal-name">Nombre</label>
+                                <input id="animal-name" type="text" placeholder="Nombre del animal">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="animal-breed">Raza</label>
+                                <input id="animal-breed" type="text" placeholder="Ej. Holstein">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="animal-sex">Sexo</label>
+                                <select id="animal-sex">
+                                    <option value="Hembra">Hembra</option>
+                                    <option value="Macho">Macho</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="animal-birth">Fecha de nacimiento</label>
+                                <input id="animal-birth" type="date">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="animal-lot">Lote asignado</label>
+                                <select id="animal-lot">
+                                    <option value="">Sin asignar</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="app-button">
+                                <i class="fa-solid fa-floppy-disk"></i>
+                                Guardar animal
+                            </button>
+                            <button type="button" class="secondary-button hidden" id="cancel-animal-edit">
+                                Cancelar edición
+                            </button>
+                        </div>
+
+                        <p id="animal-feedback" class="form-feedback" role="status"></p>
+
+                    </form>
+
+                </div>
+
+                <div class="dashboard-panel">
+                    <div class="panel-heading">
+                        <h3>Animales registrados</h3>
+                        <span id="animal-count" class="record-count">0 registros</span>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Raza</th>
+                                <th>Sexo</th>
+                                <th>Lote</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody id="animals-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- LOTES -->
+            <section id="lots-view" class="dashboard-view hidden">
+
+                <div class="view-heading">
+                    <div>
+                        <h2>Gestión de lotes</h2>
+                        <p>Organiza los animales según su ubicación o clasificación.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-panel">
+                    <h3>Registrar nuevo lote</h3>
+
+                    <form id="lot-form" class="dashboard-form">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="lot-name">Nombre del lote *</label>
+                                <input type="text" id="lot-name" required placeholder="Ej. Lote Norte">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lot-location">Ubicación</label>
+                                <input type="text" id="lot-location" placeholder="Ej. Sector norte">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="lot-description">Descripción</label>
+                                <textarea id="lot-description" rows="2" placeholder="Información adicional"></textarea>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="app-button">
+                            <i class="fa-solid fa-plus"></i>
+                            Registrar lote
+                        </button>
+
+                        <p id="lot-feedback" class="form-feedback" role="status"></p>
+
+                    </form>
+                </div>
+
+                <div class="dashboard-panel">
+                    <h3>Lotes registrados</h3>
+
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Ubicación</th>
+                                <th>Animales</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody id="lots-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- VACUNACIONES -->
+            <section id="vaccinations-view" class="dashboard-view hidden">
+
+                <div class="view-heading">
+                    <div>
+                        <h2>Control de vacunación</h2>
+                        <p>Registra las vacunas aplicadas y sus próximas fechas.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-panel">
+                    <h3>Registrar vacunación</h3>
+
+                    <form id="vaccination-form" class="dashboard-form">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="vaccination-animal">Animal *</label>
+                                <select id="vaccination-animal" required></select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="vaccine-name">Nombre de la vacuna *</label>
+                                <input id="vaccine-name" type="text" required placeholder="Ej. Vacuna contra la fiebre aftosa">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="vaccination-date">Fecha de aplicación *</label>
+                                <input id="vaccination-date" type="date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="vaccination-next-date">Próxima vacunación</label>
+                                <input id="vaccination-next-date" type="date">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="vaccination-notes">Observaciones</label>
+                                <textarea id="vaccination-notes" rows="2" placeholder="Detalles de la vacunación"></textarea>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="app-button">
+                            <i class="fa-solid fa-syringe"></i>
+                            Guardar vacunación
+                        </button>
+
+                        <p id="vaccination-feedback" class="form-feedback" role="status"></p>
+
+                    </form>
+                </div>
+
+                <div class="dashboard-panel">
+                    <h3>Historial de vacunaciones</h3>
+
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                            <tr>
+                                <th>Animal</th>
+                                <th>Vacuna</th>
+                                <th>Aplicación</th>
+                                <th>Próxima fecha</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody id="vaccinations-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ALIMENTACIÓN -->
+            <section id="feeding-view" class="dashboard-view hidden">
+
+                <div class="view-heading">
+                    <div>
+                        <h2>Control de alimentación</h2>
+                        <p>Registra el alimento suministrado a animales y lotes.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-panel">
+                    <h3>Registrar alimentación</h3>
+
+                    <form id="feeding-form" class="dashboard-form">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="feeding-target-type">Tipo de destino *</label>
+                                <select id="feeding-target-type">
+                                    <option value="animal">Animal</option>
+                                    <option value="lot">Lote</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="feeding-target">Animal o lote *</label>
+                                <select id="feeding-target" required></select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="feed-type">Tipo de alimento *</label>
+                                <input id="feed-type" type="text" required placeholder="Ej. Pasto, concentrado">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="feeding-quantity">Cantidad (kg) *</label>
+                                <input id="feeding-quantity" type="number" min="0.1" step="0.1" required placeholder="Ej. 15">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="feeding-date">Fecha *</label>
+                                <input id="feeding-date" type="date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="feeding-notes">Observaciones</label>
+                                <input id="feeding-notes" type="text" placeholder="Detalles adicionales">
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="app-button">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                            Guardar alimentación
+                        </button>
+
+                        <p id="feeding-feedback" class="form-feedback" role="status"></p>
+
+                    </form>
+                </div>
+
+                <div class="dashboard-panel">
+                    <h3>Historial de alimentación</h3>
+
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                            <tr>
+                                <th>Destino</th>
+                                <th>Alimento</th>
+                                <th>Cantidad</th>
+                                <th>Fecha</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody id="feedings-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="dashboard-footer">
+                MiGranja · SmartFarm-IHC · Panel de demostración
+            </footer>
+
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
