@@ -143,6 +143,7 @@ h1, h2, h3 { font-family: "Nunito", sans-serif; }
 .plan-description { min-height: 42px; margin: 3px 0 14px; color: var(--muted); font-size: 12px; }
 .plan-price { margin-bottom: 22px; color: var(--brown-700); font-family: "Nunito", sans-serif; font-size: 39px; font-weight: 900; letter-spacing: -1.5px; line-height: 1.2; }
 .plan-price span { font-size: 23px; letter-spacing: 0; }
+.plan-period { color: var(--muted); font-family: "DM Sans", sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0; }
 .plan-features { display: grid; gap: 12px; margin: 0 0 28px; padding: 0; list-style: none; }
 .plan-features li { display: flex; align-items: flex-start; gap: 9px; color: #61574e; font-size: 12px; line-height: 1.5; }
 .plan-features i { margin-top: 3px; color: var(--green-700); font-size: 11px; }
