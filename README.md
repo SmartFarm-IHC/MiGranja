@@ -115,3 +115,9 @@ Al terminar, realizar commit, publicar la rama y abrir un Pull Request hacia `de
 - Reemplazar info@migranja.com si se establece un correo institucional diferente.
 - Los enlaces de redes sociales son referencias visuales y deberÃ¡n actualizarse con las cuentas oficiales cuando estÃ©n disponibles.
 - El formulario utiliza `mailto:`; por lo que no almacena ni envÃ­a datos a un servidor.
+## Guía de contribución y buenas prácticas
+
+1. Todas las ramas de trabajo deben crearse a partir de develop.
+2. Seguir la convención de Conventional Commits (feat, fix, docs, style, refactor, perf).
+3. Verificar visualmente en navegadores modernos (Chrome, Firefox, Edge) antes de solicitar revisión.
+4. No incluir archivos innecesarios ni dependencias locales en el repositorio.
