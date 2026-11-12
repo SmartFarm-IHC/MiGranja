@@ -121,6 +121,5 @@ Al terminar, realizar commit, publicar la rama y abrir un Pull Request hacia `de
 - Reemplazar `info@migranja.com` si se define un correo institucional diferente.
 - Los enlaces de redes sociales son referencias visuales y deben cambiarse por las cuentas oficiales cuando estén disponibles.
 - El formulario utiliza `mailto:`; no almacena ni envía datos a un servidor.
-h
 
 >>>>>>> be65140900be5b9dc02ec39b703dd371446f21e0
