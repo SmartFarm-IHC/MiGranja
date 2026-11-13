@@ -59,21 +59,21 @@ No se utilizan frameworks CSS ni frameworks de JavaScript.
 
 ```text
 migranja-landing-page/
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ README.md
-â””â”€â”€ public/
-    â”œâ”€â”€ index.html
-    â”œâ”€â”€ favicon.ico
-    â””â”€â”€ assets/
-        â”œâ”€â”€ images/
-        â”‚   â”œâ”€â”€ about-cattle.jpg
-        â”‚   â”œâ”€â”€ brand-symbol.svg
-        â”‚   â”œâ”€â”€ feeding-cattle.jpg
-        â”‚   â””â”€â”€ hero-farm.jpg
-        â”œâ”€â”€ scripts/
-        â”‚   â””â”€â”€ main.js
-        â””â”€â”€ styles/
-            â””â”€â”€ styles.css
+|-- .gitignore
+|-- README.md
+`-- public/
+    |-- index.html
+    |-- favicon.ico
+    `-- assets/
+        |-- images/
+        |   |-- about-cattle.jpg
+        |   |-- brand-symbol.svg
+        |   |-- feeding-cattle.jpg
+        |   `-- hero-farm.jpg
+        |-- scripts/
+        |   `-- main.js
+        `-- styles/
+            `-- styles.css
 ```
 
 ## EjecuciÃ³n local
