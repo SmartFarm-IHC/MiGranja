@@ -1,51 +1,51 @@
-# MiGranja – Landing Page
+# MiGranja | Landing Page
 
-Landing page informativa de **Mi Granja**, una solución digital propuesta por SmartFarm para centralizar y organizar la información de animales y lotes de una unidad ganadera.
+Landing page informativa de **Mi Granja**, una solucion digital propuesta por SmartFarm para centralizar y organizar la informacion de animales y lotes de una unidad ganadera.
 
-## Información del proyecto
+## Informacion del proyecto
 
-SmartFarm es una startup académica integrada por estudiantes de Ingeniería de Software e Ingeniería de Sistemas de Información de la Universidad Peruana de Ciencias Aplicadas (UPC). Su propuesta, MiGranja, busca facilitar la gestión ganadera mediante una plataforma sencilla y accesible que permite registrar y consultar información del ganado de manera eficiente.
+SmartFarm es una startup academica integrada por estudiantes de Ingenieri­a de Software e Ingenieri­a de Sistemas de Informacion de la Universidad Peruana de Ciencias Aplicadas (UPC). Su propuesta, MiGranja, busca facilitar la gestion ganadera mediante una plataforma sencilla y accesible que permite registrar y consultar informacion del ganado de manera eficiente.
 
-La landing page presenta la propuesta de valor, los servicios, los planes y la información institucional de SmartFarm.
+La landing page presenta la propuesta de valor, los servicios, los planes y la informacion institucional de SmartFarm.
 
 ## Autores
 
-- Albino Florencio Cáceres Pizarro — U201923820
-- Arian Andre Casas Milla — U202521438
-- Santiago Luis Ñahui Arroyo — U202320691
-- Mathias Joshua Rodrigo Oscanoa Ingaruca — U202126131
-- Scarlet Josefina Rivera Aguilar — U20241F577
-- José Gabriel Rudas Chavarría — U202410062
+- Albino Florencio Caceres Pizarro | U201923820
+- Arian Andre Casas Milla | U202521438
+- Santiago Luis Nahui Arroyo | U202320691
+- Mathias Joshua Rodrigo Oscanoa Ingaruca | U202126131
+- Scarlet Josefina Rivera Aguilar | U20241F577
+- Jose Gabriel Rudas Chavarri­a | U202410062
 
 ## Segmentos objetivo
 
 ### 1. Productores y propietarios ganaderos
 
-Personas responsables de supervisar animales y lotes, consultar historiales y tomar decisiones sobre la operación ganadera. Requieren información organizada y accesible para conocer el estado de su ganado.
+Personas responsables de supervisar animales y lotes, consultar historiales y tomar decisiones sobre la operacion ganadera. Requieren informacion organizada y accesible para conocer el estado de su ganado.
 
 ### 2. Administradores y encargados de granjas
 
-Usuarios responsables de las actividades operativas y del registro de información. Necesitan registrar y consultar alimentación, vacunación, ubicación y movimientos de los animales de manera práctica.
+Usuarios responsables de las actividades operativas y del registro de informacion. Necesitan registrar y consultar alimentacion, vacunacion, ubicacion y movimientos de los animales de manera practica.
 
-## Características principales
+## CaracterÃ­sticas principales
 
-- Registro y consulta de animales mediante un código individual.
-- Creación, organización y consulta de lotes.
-- Registro de alimentación y vacunación, de forma individual o por lote.
-- Registro de ubicación y movimientos entre corrales y potreros.
+- Registro y consulta de animales mediante un codigo individual.
+- Creacion, organizacion y consulta de lotes.
+- Registro de alimentacion y vacunacion, de forma individual o por lote.
+- Registro de ubicacion y movimientos entre corrales y potreros.
 - Consulta del historial integral de animales y lotes.
-- Recordatorios de actividades y reportes básicos.
-- Gestión de la información desde dispositivos existentes, sin depender de sensores o GPS.
+- Recordatorios de actividades y reportes basicos.
+- Gestion de la informacion desde dispositivos existentes, sin depender de sensores o GPS.
 
 ## Secciones de la landing page
 
 - **Inicio:** propuesta de valor de MiGranja y accesos principales.
-- **Servicios:** gestión de animales, lotes, alimentación, vacunación, ubicación y movimientos.
-- **Planes:** Básico, Pro y Premium, de acuerdo con el mock-up del proyecto.
-- **Quiénes somos:** descripción de SmartFarm, misión, visión y valores.
-- **Contáctanos:** formulario de consulta que prepara un mensaje mediante el cliente de correo del usuario.
+- **Servicios:** gestion de animales, lotes, alimentacion, vacunacion, ubicacion y movimientos.
+- **Planes:** Basico, Pro y Premium, de acuerdo con el mock-up del proyecto.
+- **Quienes somos:** descripcion de SmartFarm, mision, vision y valores.
+- **Contactanos:** formulario de consulta que prepara un mensaje mediante el cliente de correo del usuario.
 
-## Tecnologías utilizadas
+## Tecnologi­as utilizadas
 
 - HTML5
 - CSS3
@@ -59,37 +59,37 @@ No se utilizan frameworks CSS ni frameworks de JavaScript.
 
 ```text
 migranja-landing-page/
-├── .gitignore
-├── README.md
-└── public/
-    ├── index.html
-    ├── favicon.ico
-    └── assets/
-        ├── images/
-        │   ├── about-cattle.jpg
-        │   ├── brand-symbol.svg
-        │   ├── feeding-cattle.jpg
-        │   └── hero-farm.jpg
-        ├── scripts/
-        │   └── main.js
-        └── styles/
-            └── styles.css
+â”œâ”€â”€ .gitignore
+â”œâ”€â”€ README.md
+â””â”€â”€ public/
+    â”œâ”€â”€ index.html
+    â”œâ”€â”€ favicon.ico
+    â””â”€â”€ assets/
+        â”œâ”€â”€ images/
+        â”‚   â”œâ”€â”€ about-cattle.jpg
+        â”‚   â”œâ”€â”€ brand-symbol.svg
+        â”‚   â”œâ”€â”€ feeding-cattle.jpg
+        â”‚   â””â”€â”€ hero-farm.jpg
+        â”œâ”€â”€ scripts/
+        â”‚   â””â”€â”€ main.js
+        â””â”€â”€ styles/
+            â””â”€â”€ styles.css
 ```
 
-## Ejecución local
+## EjecuciÃ³n local
 
 1. Abrir la carpeta del proyecto en WebStorm.
 2. Abrir `public/index.html` en el navegador o ejecutarlo mediante el servidor de desarrollo integrado de WebStorm.
-3. Verificar que se carguen los estilos, scripts e imágenes desde `public/assets/`.
+3. Verificar que se carguen los estilos, scripts e imÃ¡genes desde `public/assets/`.
 
-No se requiere instalar dependencias ni ejecutar un proceso de compilación.
+No se requiere instalar dependencias ni ejecutar un proceso de compilaciÃ³n.
 
 ## GitFlow sugerido
 
 Ramas principales:
 
-- `main`: versión estable del proyecto.
-- `develop`: integración del trabajo del equipo.
+- `main`: versiÃ³n estable del proyecto.
+- `develop`: integraciÃ³n del trabajo del equipo.
 - `feature/*`: ramas de funcionalidad creadas siempre a partir de `develop`.
 
 Ejemplos de ramas de trabajo:
@@ -111,13 +111,13 @@ Al terminar, realizar commit, publicar la rama y abrir un Pull Request hacia `de
 
 ## Consideraciones antes de publicar
 
-- Verificar que los precios de los planes coincidan con la versión aprobada por el equipo.
+- Verificar que los precios de los planes coincidan con la versiÃ³n aprobada por el equipo.
 - Reemplazar info@migranja.com si se establece un correo institucional diferente.
-- Los enlaces de redes sociales son referencias visuales y deberán actualizarse con las cuentas oficiales cuando estén disponibles.
-- El formulario utiliza `mailto:`; por lo que no almacena ni envía datos a un servidor.
-## Gu�a de contribuci�n y buenas pr�cticas
+- Los enlaces de redes sociales son referencias visuales y deberÃ¡n actualizarse con las cuentas oficiales cuando estÃ©n disponibles.
+- El formulario utiliza `mailto:`; por lo que no almacena ni envÃ­a datos a un servidor.
+## Guía de contribución y buenas prácticas
 
 1. Todas las ramas de trabajo deben crearse a partir de develop.
-2. Seguir la convenci�n de Conventional Commits (feat, fix, docs, style, refactor, perf).
-3. Verificar visualmente en navegadores modernos (Chrome, Firefox, Edge) antes de solicitar revisi�n.
+2. Seguir la convención de Conventional Commits (feat, fix, docs, style, refactor, perf).
+3. Verificar visualmente en navegadores modernos (Chrome, Firefox, Edge) antes de solicitar revisión.
 4. No incluir archivos innecesarios ni dependencias locales en el repositorio.
