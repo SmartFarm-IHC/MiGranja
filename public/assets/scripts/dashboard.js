@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const session = store.getSession();
 
     if (!session) {
-        window.location.replace('login.html');
+        window.location.replace('app/');
         return;
     }
 
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!confirm('¿Seguro que deseas cerrar sesión?')) return;
 
         store.clearSession();
-        window.location.replace('login.html');
+        window.location.replace('app/');
     });
 
     // 7. ACTUALIZAR SELECTORES
